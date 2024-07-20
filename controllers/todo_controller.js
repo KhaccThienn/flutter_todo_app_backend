@@ -13,6 +13,7 @@ const todo_controller = {
     },
     createToDoTask: (req, res) => {
         todo.createToDoTask(req.body, (err, data) => {
+            console.log("🚀 ~ todo.createToDoTask ~ req.body:", req.body)
             if (err) {
                 res.json(err);
             } else {
