@@ -23,11 +23,12 @@ const todo_controller = {
         });
     },
     updateToDoStatus: (req, res) => {
-        todo.updateToDoStatus(req.params.id, req.body, (err, data) => {
+        const { isDone } = req.body;
+        todo.updateToDoStatus(req.params.id, isDone, (err, data) => {
             if (err) {
                 res.json(err);
             } else {
-                console.log("🚀 ~ todo.updateToDoStatus ~ data:", data)
+                console.log("🚀 ~ todo.updateToDoStatus ~ data:", data);
                 res.status(200).json(data);
             }
         });

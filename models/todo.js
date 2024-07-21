@@ -21,9 +21,9 @@ const todo = {
             }
         });
     },
-    updateToDoStatus: (id, data, callback) => {
-        let query = "UPDATE tbl_todo SET ? WHERE id = ?";
-        conn.query(query, [data, id], (err, result) => {
+    updateToDoStatus: (id, isDone, callback) => {
+        let query = "UPDATE tbl_todo SET isDone = ? WHERE id = ?";
+        conn.query(query, [isDone, id], (err, result) => {
             if (err) {
                 callback(err, null);
             } else {
