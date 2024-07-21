@@ -21,9 +21,9 @@ CREATE TABLE IF NOT EXISTS tbl_todo(
 );
 
 INSERT INTO tb_user(username, display_name, password, avatar) VALUES 
-('user1', 'Remi No Love 1', '12345678', "http://localhost:8000/users/user1.jpg"),
-('user2', 'Remi No Love 2', '12345678', "http://localhost:8000/users/user2.png"),
-('user3', 'Remi No Love 3', '12345678', "http://localhost:8000/users/user3.jpg")
+('user1', 'Remi No Love 1', '12345678', "users/user1.jpg"),
+('user2', 'Remi No Love 2', '12345678', "users/user2.png"),
+('user3', 'Remi No Love 3', '12345678', "users/user3.jpg")
 
 INSERT INTO tbl_todo (`todoText`, `isDone`, created_date, end_date, user_id) VALUES
 ("Morning Exercise", 1, "2024-07-16 05:00:00", "2024-07-16 06:00:00",1),

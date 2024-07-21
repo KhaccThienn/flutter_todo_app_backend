@@ -11,8 +11,8 @@ const user_controller = {
             }
         })
     },
-    login: (req, res) => { 
-        user.login(req.body,(err, result) => {
+    login: (req, res) => {
+        user.login(req.body, (err, result) => {
             if (err) {
                 res.json(err);
             } else {
