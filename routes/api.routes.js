@@ -1,9 +1,12 @@
+const uploadFile = require("../configs/uploadFile")
 const todo_controller = require("../controllers/todo_controller")
 const user_controller = require("../controllers/user_controller")
 
 const api_routes = (app) => {
     app.get("/api/v1/user/:id", user_controller.getUserData)
     app.post("/api/v1/login", user_controller.login)
+    app.post("/api/v1/password", user_controller.updatePassword)
+    app.post("/api/v1/register", uploadFile.single("file"), user_controller.register)
 
     app.get("/api/v1/todos/:user_id", todo_controller.getAllToDoList)
     app.post("/api/v1/todos/create", todo_controller.createToDoTask)

@@ -15,12 +15,12 @@ CREATE TABLE IF NOT EXISTS tbl_todo(
     todoText VARCHAR(255) NOT NULL,
     isDone TINYINT DEFAULT 1,
     user_id INT,
-    FOREIGN KEY (user_id) REFERENCES tb_user(id),
+    FOREIGN KEY (user_id) REFERENCES tbl_user(id),
     created_date TIMESTAMP NOT NULL,
     end_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO tb_user(username, display_name, password, avatar) VALUES 
+INSERT INTO tbl_user(username, display_name, password, avatar) VALUES 
 ('user1', 'Remi No Love 1', '12345678', "users/user1.jpg"),
 ('user2', 'Remi No Love 2', '12345678', "users/user2.png"),
 ('user3', 'Remi No Love 3', '12345678', "users/user3.jpg")

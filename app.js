@@ -28,5 +28,5 @@ app._router.stack.forEach(function (r) {
 console.log();
 
 app.listen(process.env.APP_PORT, process.env.APP_HOST, () => {
-    console.log(`Server is listening on http://%s:%s`, process.env.APP_HOST_LAN, process.env.APP_PORT);
+    console.log(`Server is listening on http://%s:%s`, process.env.APP_HOST, process.env.APP_PORT);
 });
